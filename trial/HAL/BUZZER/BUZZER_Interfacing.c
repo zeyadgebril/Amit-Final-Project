@@ -1,0 +1,25 @@
+/*
+ * BUZZER_Interfacing.c
+ *
+ * Created: 9/21/2022 4:11:27 PM
+ *  Author: User
+ */ 
+#include "BUZZER_Private.h"
+
+void BUZZER_Initialize(void)
+{
+	DIO_SETPIN_DIRECTION(BUZZER_PRT,BUZZER,DIO_OUTPUT);
+}
+void BUZZER_ON(void)
+{
+	DIO_SETPIN_VALUE(BUZZER_PRT,BUZZER,DIO_HIGH);
+}
+void BUZZER_OFF(void)
+{
+	DIO_SETPIN_VALUE(BUZZER_PRT,BUZZER,DIO_LOW);
+	
+}
+void BUZZER_TGL(void)
+{
+	DIO_TOGPIN_VALUE(BUZZER_PRT,BUZZER);	
+}
